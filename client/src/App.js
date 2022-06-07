@@ -1,14 +1,23 @@
 
 //hey SSSS 1212
-import React from "react";
+import React ,{useEffect} from "react";
 import { Container, AppBar, Typography, Grow, Grid } from "@mui/material";
+import {useDispatch} from 'react-redux';
+import {getPosts} from './actions/posts';
+
 import Form from "./components/Form/Form";
 import Posts from "./components/Posts/Posts";
 import useStyles from "./styles";
 
 import memories from "../src/images/memories.png";
+
 export default function App() {
   const classes = useStyles();
+  const dispach = useDispatch();
+
+  useEffect(()=>{
+    dispach(getPosts());
+  },[dispach])
   return (
     <Container maxidth="lg"  >
       
