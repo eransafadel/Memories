@@ -13,7 +13,7 @@ export default function App() {
         <Typography className={classes.heading} variant="h2" align="center">
           Memories
         </Typography>
-        <img className={classes.image} src={memories} alt="memories" height="60"></img>
+        {/* <img className={classes.image} src={memories} alt="memories" height="60"></img> */}
       </AppBar>
       <Grow in>
         <Container>
@@ -24,6 +24,7 @@ export default function App() {
             spacing={3}
           >
             <Grid item xs={12} sm={7}>
+             
               <Posts />
             </Grid>
 
