@@ -7,5 +7,6 @@ const router = express.Router();
 
 router.get('/',getPosts);
 router.post('/',createPost);
+router.patch('/:id',updatePost);// for update existing document
 
 export default router;
