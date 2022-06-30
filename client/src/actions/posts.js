@@ -28,6 +28,7 @@ export const createPost = (post) => async (dispatch) => {
 
     }
     catch(error){
+      console.log("there is problem\n");
       console.log(error.message);
     }
   }
