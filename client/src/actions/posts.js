@@ -1,10 +1,11 @@
 import * as api from '../api/index.js';
+import {FETCH_ALL,CREATE,UPDATE,DELETE} from '../constants/macros';
 
 export const getPosts = () => async (dispatch) => {
   try {
     const { data } = await api.fetchPosts();
 
-    dispatch({ type: 'FETCH_ALL', payload: data });
+    dispatch({ type: FETCH_ALL, payload: data });
   } catch (error) {
     console.log(error.message);
   }
@@ -15,7 +16,7 @@ export const createPost = (post) => async (dispatch) => {
     try {
       const { data } = await api.createPost(post);
   
-      dispatch({ type: 'CREATE', payload: data });
+      dispatch({ type: CREATE, payload: data });
     } catch (error) {
       console.log(error.message);
     }
@@ -24,7 +25,7 @@ export const createPost = (post) => async (dispatch) => {
   export const updatedPost = (id,post) => async (dispatch) => {
     try{
         const { data } =await api.updatePost(id,post);
-        dispatch({ type:'UPDATE',payload:data});
+        dispatch({ type:UPDATE,payload:data});
 
     }
     catch(error){
@@ -40,7 +41,7 @@ export const createPost = (post) => async (dispatch) => {
         await api.deletePost(id);
 
         console.log("DELETE!");
-        dispatch({ type:'DELETE ',payload:id});
+        dispatch({ type: DELETE ,payload:id});
 
     }
     catch(error){
@@ -55,7 +56,7 @@ export const createPost = (post) => async (dispatch) => {
  
     try{
       const { data } =await api.likePost(id);
-      dispatch({ type:'UPDATE',payload:data});
+      dispatch({ type: UPDATE ,payload:data});
 
   }
   catch(error){
