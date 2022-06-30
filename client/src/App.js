@@ -26,7 +26,7 @@ export default function App() {
       </AppBar>
       <Grow in>
         <Container>
-          <Grid
+          <Grid className={classes.mainContainer}
             container
             justify="space-between"
             alignItems="strecth"
