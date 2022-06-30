@@ -15,7 +15,7 @@ export default function App() {
   const dispatch = useDispatch();
   useEffect(()=>{
     dispatch(getPosts());
-  },[currentId,dispatch])
+  },[dispatch,currentId])
   return (
     <Container maxidth="lg">
       <AppBar className={classes.appBar} position="static" color="inherit">
