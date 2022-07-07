@@ -6,7 +6,8 @@ import {getPosts} from './actions/posts';
 import Form from "./components/Form/Form";
 import Posts from "./components/Posts/Posts";
 import useStyles from "./styles";
-import memories from "../src/images/memories.png";
+import Navbar from "./components/Navbar/Navbar";
+
 
 export default function App() {
 
@@ -18,12 +19,7 @@ export default function App() {
   },[dispatch,currentId])
   return (
     <Container maxidth="lg">
-      <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2" align="center">
-          My Memories
-        </Typography>
-        <img className={classes.image} src={memories} alt="memories" height="60"></img>
-      </AppBar>
+     <Navbar/>
       <Grow in>
         <Container>
           <Grid className={classes.mainContainer}
