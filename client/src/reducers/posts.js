@@ -1,4 +1,4 @@
-import {FETCH_ALL,CREATE,UPDATE,DELETE} from '../constants/macros';
+import {FETCH_ALL,CREATE,UPDATE,DELETE} from '../constants/actionTypes';
 
 export default (posts = [], action) => {
   switch (action.type) {

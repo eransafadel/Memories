@@ -7,6 +7,7 @@ export default makeStyles((theme) => ({
     margin: '20px 0',
     display: 'flex',
     flexDirection: 'row',
+    justifyContent:'space-between',
     alignItems: 'left',
     padding: '10px 50px',
   },
